@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<!-- type="text/javascript" is optional in HTML5 -->
+	<script>
+		// JavaScript comments can be one-line
+		/* and block based */
+
+		// JavaScript is typeless you only denote names for both functions, parameters and variables
+		var customVariable = "Hello World!";
+		var anotherVariable = 2.0;
+		var somethingElse = 1;
+
+		function doThingsAndReturnString() {
+			console.log("This is an example of a log! Access this through the console-tab in the Inspector (default F12).");
+			return "This will be returned when the function is called.";
+		}
+
+		function doThingsWithParameters (param1) {
+			console.log("Parameter 1 is: '" + param1 + "'");
+		}
+
+		function overwriteParagraphContent() {
+			document.querySelector("p").innerHTML = "Overwriting content.";
+		}
+
+		doThingsAndReturnString(); // This function returns a value, but the return-value is simply "thrown away", since it's not being stored;
+		var sampleVariable = doThingsAndReturnString(); // = "This will be returned when the function is called."
+
+		// JavaScript is being called top from bottom
+		overwriteParagraphContent(); // This will fail, as there's no <p>-element present at this point of execution
+
+		window.onload = function () { // Either wait for the page to load...
+			overwriteParagraphContent(); // This will be executed after the page is "loaded" (http://www.w3schools.com/jsref/event_onload.asp)
+		}
+	</script>
+</head>
+<body>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat maiores qui similique, sequi, dicta rem, amet soluta aut ullam, odit quas eligendi. Fuga sint qui, non similique numquam voluptatibus illum.
+	</p>
+	<script>
+		overwriteParagraphContent(); // ...or execute this after the <p>-element is present
+	</script>
+	<!--
+		<script>-tags can be located anywhere.
+	-->
+</body>
+</html>

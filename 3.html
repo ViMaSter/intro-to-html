@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<!-- type="text/css" is optional in HTML5 -->
+	<!-- style tags ONLY contain the language expected (either by specifying the type-attribute or "text/css" by default) -->
+	<style>
+		/* CSS comments can only be block-comments */
+
+		/* <CSS3 is basically "write only". They only modify and don't react to things "happening". */
+		p {	/* selector */
+			color: grey;	/* "key: value;"-pairs */
+		}
+
+		/* CSS3 allows small behaviour-modifications */
+		@media (min-width: 800px) {	/* "@media (condition) {behaviour to override}" */
+			p {	/* selector */
+				color: darkgrey;	/* "key: value;"-pairs */
+			}
+		}
+	</style>
+</head>
+<body>
+	<div> <!-- Division -->
+		<p> <!-- Paragraph -->
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur facilis eius earum adipisci provident dolorem! Doloribus cum, aut delectus eaque qui dignissimos architecto error hic obcaecati, aperiam sequi vel ipsum.
+		</p>
+	</div>
+
+	<p>
+		<span><!-- Same as "inline" div -->
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum fugiat facilis voluptate hic, assumenda ratione earum a reiciendis, labore ea quisquam vitae, sint quia nulla officia quibusdam veniam tempora officiis.
+		</span>
+		<span>
+			Neque maiores inventore unde modi necessitatibus cupiditate, veritatis explicabo harum voluptatem! Nam sed nihil alias corporis dolorem ut ipsam rerum. Laborum, ipsum unde mollitia aliquid accusamus voluptatum natus harum consectetur.
+		</span>
+	</p>
+
+	<div>
+		<p>
+			<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum fugiat facilis voluptate hic, assumenda ratione earum a reiciendis, labore ea quisquam vitae, sint quia nulla officia quibusdam veniam tempora officiis.</span>
+			<span>Neque maiores inventore unde modi necessitatibus cupiditate, veritatis explicabo harum voluptatem! Nam sed nihil alias corporis dolorem ut ipsam rerum. Laborum, ipsum unde mollitia aliquid accusamus voluptatum natus harum consectetur.</span>
+		</p>
+	</div>
+
+	<style>
+		p {
+			background-color: #EEE;
+		}
+	</style>
+	<!--
+		<style>-tags can be located anywhere. If multiple definitions apply to the same selector, they'll be merged
+		Later definitions will overwrite sooner definitions, if the same key is being used in multiple selectors of the same kind
+	-->
+</body>
+</html>
